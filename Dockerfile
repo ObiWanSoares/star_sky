@@ -1,8 +1,7 @@
-# Usa uma imagem oficial do PHP com Apache
 FROM php:8.2-apache
 
-# Copia todos os ficheiros do teu projeto para a pasta do Apache
-COPY . /var/www/html/
+# Instalar pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql
 
-# Expõe a porta 80 (web)
+COPY . /var/www/html/
 EXPOSE 80
