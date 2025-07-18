@@ -6,11 +6,20 @@ if (!extension_loaded('pdo_mysql')) {
     die('A extensão PDO MySQL não está instalada.');
 }
 
-// Configurações da base de dados (ajusta conforme o teu ambiente)
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'star_sky'); // ou 'star_sky'
-define('DB_USER', 'root');       // utilizador XAMPP padrão
-define('DB_PASS', '');           // senha vazia padrão XAMPP
+// Detectar se estás local ou online (Render)
+if ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_ADDR'] === '127.0.0.1') {
+    // Localhost
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'star_sky');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+} else {
+    // ONLINE (Render, Railway, etc.)
+    define('DB_HOST', 'host_do_railway');
+    define('DB_NAME', 'nome_da_base_de_dados');
+    define('DB_USER', 'utilizador');
+    define('DB_PASS', 'password');
+}
 
 /**
  * Devolve ligação PDO ativa à base de dados.
@@ -33,7 +42,6 @@ function connect_db() {
         $pdo->exec("SET NAMES 'utf8mb4'");
         return $pdo;
     } catch (PDOException $e) {
-        // Em produção podes trocar por mensagem mais amigável ou logar o erro
         die("Erro na ligação à base de dados: " . $e->getMessage());
     }
 }
