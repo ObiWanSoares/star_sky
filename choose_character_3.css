@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:700,500,400&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', Arial, sans-serif;
+    background: url("img/fundo_star_sky.png") no-repeat center center fixed;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+body {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.main-character-wrap {
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.char-sidebar {
+    width: 330px;
+    min-width: 230px;
+    background: rgba(18,22,34,0.97);
+    box-shadow: 2px 0 16px #1a174a30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    padding: 0;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.char-sidebar-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0;
+    padding: 18px 0 36px 0;
+}
+
+.char-avatar-box {
+    background: #191f2f;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #0006;
+    padding: 18px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px !important;
+}
+
+.char-avatar-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #232546;
+    box-shadow: 0 1px 6px #1a174a60;
+    display: block;
+}
+
+.char-sidebar-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.char-info-label {
+    color: #7db8ff;
+    font-size: 1.15em;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.01em;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.char-info-value {
+    color: #fff;
+    font-size: 1.35em;
+    font-weight: 700;
+    text-align: center;
+    word-break: break-all;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.char-main {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 0 0 0 0;
+}
+
+.char-content-center {
+    width: 100%;
+    max-width: 880px;
+    margin-left: 4cm;
+    margin-right: 0;
+    margin-top: 56px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+    min-width: 340px;
+}
+
+/* LOGO NO TOPO DIREITO, GRANDE */
+.character-logo {
+    position: absolute;
+    top: 24px;
+    right: 44px;
+    margin: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+.character-logo img {
+    max-width: 320px;
+    width: 300px;
+    height: auto;
+    opacity: 1;
+    display: block;
+    filter: drop-shadow(0 4px 20px #15c37b44);
+}
+
+.character-step-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(20,30,44,0.78);
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin-bottom: 18px;
+    width: 100%;
+    min-height: 44px;
+    justify-content: flex-start;
+}
+.character-step-title {
+    color: #fff;
+    font-size: 2.4em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.skills-form {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+}
+
+.skills-points-remaining {
+    color: #15c37b;
+    font-size: 1.18em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 18px;
+    margin-top: 10px;
+    letter-spacing: .03em;
+    padding-left: 4px;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.skills-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(30,34,58,0.98);
+    border-radius: 14px;
+    padding: 14px 26px;
+    box-shadow: 0 1px 8px #1a174a28;
+    min-width: 0;
+    width: 100%;
+    max-width: 640px;
+}
+
+.skill-label {
+    flex: 1 1 0px;
+    font-size: 1.17em;
+    color: #a0b7ff;
+    font-weight: bold;
+    text-align: left;
+    min-width: 120px;
+    max-width: 160px;
+    letter-spacing: 0.02em;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.skill-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.skill-btn {
+    background: linear-gradient(90deg, #15c37b 70%, #1a174a 100%);
+    border: none;
+    color: #fff;
+    font-size: 1.16em;
+    font-weight: bold;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    transition: background 0.18s, color 0.18s;
+    box-shadow: 0 1px 6px #15c37b44, 0 1px 4px #1a174a33;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+.skill-btn:disabled {
+    background: #222c46;
+    color: #666c85;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.skill-btn:not(:disabled):hover, .skill-btn:not(:disabled):focus {
+    background: #18e599;
+    color: #fff;
+    outline: 2px solid #15c37b77;
+}
+.skill-value {
+    width: 44px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.28em;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.finalize-btn {
+    position: absolute;
+    right: 48px;
+    bottom: 46px;
+    width: 340px;
+    padding: 30px 0;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(92deg, #15c37b 70%, #18e599 100%);
+    color: #fff;
+    font-size: 1.45em;
+    font-weight: bold;
+    box-shadow: 0 4px 32px #15c37b54, 0 2px 16px #0002;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.14s;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 0.04em;
+    opacity: 0.97;
+    text-shadow: 0 2px 14px #12c47a44, 0 1px 2px #0006;
+    z-index: 5;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+.finalize-btn:disabled {
+    background: #1a2a34;
+    color: #7fae9c;
+    cursor: not-allowed;
+    opacity: 0.4;
+    box-shadow: none;
+    text-shadow: none;
+}
+.finalize-btn:not(:disabled):hover, .finalize-btn:not(:disabled):focus {
+    background: linear-gradient(90deg, #17e99c 60%, #15c37b 100%);
+    opacity: 1;
+    box-shadow: 0 8px 42px #15c37baa;
+    transform: translateY(-3px) scale(1.03);
+}
+
+.form-error {
+    color: #ff6464;
+    background: #200e2a99;
+    border-radius: 8px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto 14px auto;
+    max-width: 420px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+/* Corrigido: botão voltar com espaço de 1cm à esquerda */
+.back-link {
+    position: fixed;
+    left: 1cm;         /* espaço de 1cm à esquerda */
+    bottom: 18px;      /* fixo ao fundo da página */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    cursor: pointer;
+    font-family: 'Orbitron', Arial, sans-serif;
+    padding: 14px 40px;
+    border-radius: 8px;
+    background: #243a8b;
+    border: none;
+    box-shadow: 0 2px 12px #0005;
+    transition: background 0.2s, color 0.2s;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 2px solid #38ffb3;
+    z-index: 999;
+}
+.back-link:hover {
+    background: #15c37b;
+    color: #243a8b;
+}

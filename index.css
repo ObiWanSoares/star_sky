@@ -1,0 +1,96 @@
+body {
+    background-image: url('img/fundo_star_sky.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+.index-login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 8vh;
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-width: 640px;
+    margin-bottom: 72px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-btn {
+    background: linear-gradient(90deg, #101c2c 60%, #265cff 100%);
+    color: #fff;
+    padding: 16px 48px;
+    border: 2px solid #33bbff;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', 'Arial', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 0 16px 2px #00eaff55, 0 0 2px #33bbff;
+    cursor: pointer;
+    transition: 
+        transform 0.15s,
+        box-shadow 0.25s,
+        border-color 0.25s,
+        background 0.25s;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    outline: none;
+    text-shadow: 0 0 8px #33bbff99;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 160px;
+    text-align: center;
+}
+
+.main-btn:hover,
+.main-btn:focus {
+    background: linear-gradient(90deg, #38ffb3 10%, #101c2c 100%);
+    border-color: #38ffb3;
+    box-shadow: 0 0 32px 4px #38ffb3cc, 0 0 4px #38ffb3;
+    transform: scale(1.07);
+    filter: brightness(1.15);
+    text-shadow: 0 0 12px #38ffb399;
+}
+
+.starpedia-btn {
+    border-color: #ffd700;
+    box-shadow: 0 0 16px 2px #ffe06655, 0 0 2px #ffd700;
+    background: linear-gradient(90deg, #101c2c 60%, #ffd700 100%);
+    color: #fffbe6;
+    text-shadow: 0 0 8px #ffd70099;
+}
+
+.starpedia-btn:hover,
+.starpedia-btn:focus {
+    background: linear-gradient(90deg, #38ffb3 10%, #ffd700 100%);
+    border-color: #38ffb3;
+    box-shadow: 0 0 32px 4px #38ffb3cc, 0 0 4px #ffd700;
+    color: #fff;
+    text-shadow: 0 0 12px #38ffb399, 0 0 24px #ffd70066;
+}
+
+@media (max-width: 800px) {
+    .index-login-container {
+        padding-top: 3vh;
+    }
+    .logo img {
+        max-width: 80vw;
+    }
+    .btn-group {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
